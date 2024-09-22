@@ -1,6 +1,15 @@
+import { Metadata } from 'next'
 import Image from 'next/image'
 
-export default function ProductPage() {
+export async function generateMetadata({
+  params,
+}: PrductProps): Promise<Metadata> {
+  const product = await getProduct(params.slug)
+
+  return {
+    title: product.title,
+  }
+}
   return (
     <div className="relative grid max-h-[810px] grid-cols-3">
       <div className="col-span-2 overflow-hidden">
