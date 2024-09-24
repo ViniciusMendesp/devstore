@@ -1,3 +1,4 @@
+/* 
 import { z } from 'zod'
 
 const envSchema = z.object({
@@ -13,3 +14,5 @@ if (!parsedEnv.success) {
   throw new Error('Invalid environment variables.')
 }
 export const env = parsedEnv.data
+
+*/
